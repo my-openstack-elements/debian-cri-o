@@ -3,4 +3,7 @@
 set -e
 set -o xtrace
 
-apt-get install -y cri-o cri-o-runc
+apt-get install -y cri-o cri-o-runc cri-tools
+
+systemctl enable cri-o
+systemctl start cri-o
